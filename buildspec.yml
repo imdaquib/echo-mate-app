@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install: 
+    commands: 
+      - echo "the installation phase begins"
+  pre_build:
+    commands:
+      - echo "the prebuild phase begins"
+      - apt-get install -y nodejs npm  # Install Node.js and npm
+      - npm install     # install server side dependencies 
+      - cd client && npm install  # install client side dependencies
+  build:
+    commands:
+      - echo "the build phase begins"
+      - npm run build
+artifacts:
+  files:
+    - '**/*'

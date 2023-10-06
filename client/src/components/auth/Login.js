@@ -49,7 +49,7 @@ const Login = ({  login , isAuthenticated}) => {
       <div className='container'>
       <h1 className="large blue-text text-darken-4">Sign In</h1>
       <h5 className="lead"><i className="fas fa-user"></i> Sign into Your Account</h5>
-      <form className="form" onSubmit={e => onSubmit(e)}>
+      <form className="form" onSubmit={e => onSubmit(e)} autocomplete="off">
         <div className="form-group">
           <input
             type="email"

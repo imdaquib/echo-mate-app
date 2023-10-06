@@ -63,7 +63,7 @@ const Register = ({setAlert, register , isAuthenticated}) => {
       <h5 className='lead'>
         <i className='fas fa-user'></i> Create Your Account
       </h5>
-      <form className='form' onSubmit={e=> onSubmit(e)}>
+      <form className='form' onSubmit={e=> onSubmit(e)} autocomplete="off">
         <div className='form-group'>
           <input
             type='text'
