@@ -2,13 +2,13 @@ version: 0.2
 
 phases:
   install: 
+    runtime-versions:
+      nodejs: 18
     commands: 
       - echo "the installation phase begins"
   pre_build:
     commands:
       - echo "the prebuild phase begins"
-      - apt-get update
-      - apt-get install -y nodejs npm  # Install Node.js and npm
       - npm install     # install server side dependencies 
       - cd client && npm install  # install client side dependencies
   build:
